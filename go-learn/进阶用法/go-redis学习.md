@@ -1,14 +1,14 @@
-# go-redis学习
+# go-redis 学习
 
 ::: details 一些废话
 
-本来学校有项目需要用到redis，但是我当时不会，只是听过，然后没用，如今来学习一下。
+本来学校有项目需要用到 redis，但是我当时不会，只是听过，然后没用，如今来学习一下。
 
-因为原本的电脑windows上是装了redis的，现在坏了，使用docker重新拉取一个
+因为原本的电脑 windows 上是装了 redis 的，现在坏了，使用 docker 重新拉取一个
 
 :::
 
-## docker部署redis
+## docker 部署 redis
 
 ```yaml
 version: "3.9"
@@ -22,7 +22,7 @@ services:
       - ./data:/data
       - ./conf/redis.conf:/etc/redis/redis.conf # https://redis.io/docs/management/config-file/
       - ./logs:/logs
-    command: redis /etc/redis/redis.conf
+    command: redis-server /etc/redis/redis.conf
 ```
 
 **redis.conf:**
@@ -122,7 +122,7 @@ save 60 10000
 # maxmemory-samples 5
 ```
 
-一些redis的前置知识
+一些 redis 的前置知识
 
 ```bash
 redis-cli # 进入数据库
@@ -130,7 +130,7 @@ AUTH 123456 # 登录
 CONFIG GET * # 获取所有配置
 ```
 
-##  快速开始
+## 快速开始
 
 https://www.youtube.com/watch?v=1C3Ym_JjkMw
 
@@ -187,4 +187,4 @@ func main() {
 }
 ```
 
-这个教程简洁明了，可以存储复杂结构，用json.Marshal将结构体转为json字符串存到redis当中，根据动态生成的key值存入redis，比较符合业务要求
+这个教程简洁明了，可以存储复杂结构，用 json.Marshal 将结构体转为 json 字符串存到 redis 当中，根据动态生成的 key 值存入 redis，比较符合业务要求
