@@ -86,7 +86,7 @@ export default defineConfig({
     },
     socialLinks: [{ icon: "github", link: "https://github.com/codepzj" }],
     editLink: {
-      pattern: "https://github.com/codepzj/blog/edit/main/docs/:path",
+      pattern: "https://github.com/codepzj/docs/edit/main/:path",
       text: "在 GitHub 上编辑此页面",
     },
     footer: {
