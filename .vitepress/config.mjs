@@ -14,7 +14,7 @@ export default defineConfig({
       { text: "首页", link: "/" },
       {
         text: "文档",
-        items: [{ text: "Go学习笔记", link: "/go-learn/入门指南.html" }],
+        items: [{ text: "golang", link: "/golang/入门指南.html" }],
       },
       {
         text: "大学笔记",
@@ -26,32 +26,29 @@ export default defineConfig({
     ],
 
     sidebar: {
-      "/go-learn/": [
-        {
-          text: "Go学习笔记",
-          items: [{ text: "入门指南", link: "/go-learn/入门指南.html" }],
-        },
+      "/golang/": [
+        { text: "入门指南", link: "/golang/入门指南.html" },
         {
           text: "基本语法",
           collapsed: true,
           items: [
-            { text: "关键字", link: "/go-learn/基本语法/关键字.html" },
-            { text: "字面量", link: "/go-learn/基本语法/字面量.html" },
-            { text: "运算符", link: "/go-learn/基本语法/运算符.html" },
-            { text: "字符串", link: "/go-learn/基本语法/字符串.html" },
-            { text: "数组与切片", link: "/go-learn/基本语法/数组与切片.html" },
-            { text: "包", link: "/go-learn/基本语法/包.html" },
-            { text: "函数", link: "/go-learn/基本语法/函数.html" },
-            { text: "指针", link: "/go-learn/基本语法/指针.html" },
-            { text: "时间与日期", link: "/go-learn/基本语法/时间与日期.html" },
-            { text: "锁", link: "/go-learn/基本语法/锁.html" },
+            { text: "关键字", link: "/golang/基本语法/关键字.html" },
+            { text: "字面量", link: "/golang/基本语法/字面量.html" },
+            { text: "运算符", link: "/golang/基本语法/运算符.html" },
+            { text: "字符串", link: "/golang/基本语法/字符串.html" },
+            { text: "数组与切片", link: "/golang/基本语法/数组与切片.html" },
+            { text: "包", link: "/golang/基本语法/包.html" },
+            { text: "函数", link: "/golang/基本语法/函数.html" },
+            { text: "指针", link: "/golang/基本语法/指针.html" },
+            { text: "时间与日期", link: "/golang/基本语法/时间与日期.html" },
+            { text: "锁", link: "/golang/基本语法/锁.html" },
           ],
         },
         {
           text: "进阶用法",
           collapsed: true,
           items: [
-            { text: "redis", link: "/go-learn/进阶用法/go-redis学习.html" },
+            { text: "go-redis", link: "/golang/进阶用法/go-redis学习.html" },
           ],
         },
       ],

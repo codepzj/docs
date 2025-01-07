@@ -1,0 +1,111 @@
+{
+	"代码块": {
+		"prefix": "code",
+		"body": [
+			"```${1:language}",
+			"$2",
+			"```"
+		],
+		"description": "简写代码块"
+	},
+	"details": {
+		"prefix": "details",
+		"body": [
+			"::: details ${1:title}",
+			"$2",
+			":::"
+		],
+		"description": "vitepress details"
+	},
+	"tip": {
+		"prefix": "tip",
+		"body": [
+			"::: tip ${1:title}",
+			"$2",
+			":::"
+		],
+		"description": "vitepress tip"
+	},
+	"info": {
+		"prefix": "info",
+		"body": [
+			"::: info ${1:title}",
+			"$2",
+			":::"
+		],
+		"description": "vitepress info"
+	},
+	"danger": {
+		"prefix": "danger",
+		"body": [
+			"::: danger ${1:title}",
+			"$2",
+			":::"
+		],
+		"description": "vitepress danger"
+	},
+	"warning": {
+		"prefix": "warning",
+		"body": [
+			"::: warning ${1:title}",
+			"$2",
+			":::"
+		],
+		"description": "vitepress warning"
+	},
+	"代码组": {
+		"prefix": "code-group",
+		"body": [
+			"::: code-group",
+            "```sh [npm]",
+            "npm install vitepress-plugin-group-icons",
+            "```",
+            "",
+            "```sh [yarn]",
+            "yarn add vitepress-plugin-group-icons",
+            "```",
+            "",
+            "```sh [pnpm]",
+            "pnpm add vitepress-plugin-group-icons",
+            "```",
+            "",
+            "```sh [bun]",
+            "bun add vitepress-plugin-group-icons",
+            "```",
+			":::"
+		],
+		"description": "code-group"
+	},
+	"任务列表": {
+		"prefix": "task-checkbox",
+		"body": [
+			"* [ ] 🥔 TODO",
+			"* [ ] 真不戳",
+			"* [x] 内置任务列表"
+		],
+		"description": "task-checkbox"
+	},
+	"时间线": {
+		"prefix": "timeline",
+		"body": [
+			"::: timeline $1",
+			"$2",
+			":::"
+		],
+		"description": "task-checkbox"
+	},
+	"tabs栏": {
+		"prefix": "tabs",
+		"body": [
+			":::=tabs=ab",
+			"::a",
+			"a content",
+			"",
+			"::b",
+			"b content",
+			":::"
+		],
+		"description": "task-checkbox"
+	},
+
+}
