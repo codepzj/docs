@@ -30,7 +30,6 @@ export default defineConfig({
         { text: "入门指南", link: "/golang/入门指南.html" },
         {
           text: "基本语法",
-          collapsed: true,
           items: [
             { text: "关键字", link: "/golang/基本语法/关键字.html" },
             { text: "字面量", link: "/golang/基本语法/字面量.html" },
@@ -46,7 +45,6 @@ export default defineConfig({
         },
         {
           text: "进阶用法",
-          collapsed: true,
           items: [
             { text: "go-redis", link: "/golang/进阶用法/go-redis学习.html" },
           ],

@@ -1,6 +1,12 @@
-@import url("https://cdn.jsdelivr.net/npm/codepzj-fonts@1.0.1/TsangerJinKai05/result.css");
+.group:has([role="button"]) .VPSidebarItem.level-0 .items {
+  padding-left: 16px !important;
+  border-left: 1px solid var(--vp-c-divider);
+  border-radius: 2px;
+  transition: background-color 0.25s;
+}
 
-body {
-  font-family: "TsangerJinKai05 W05";
-  font-size: 16.5px;
+@media screen and (max-width: 767px) {
+  .blog-info-wrapper {
+    display: none;
+  }
 }

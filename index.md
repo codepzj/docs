@@ -5,8 +5,8 @@ blog:
   name: "浩瀚星河的文档"
   motto: 行百里者半九十
   inspiring: 写作巩固知识，知识推动写作
-  minScreenAvatar: true
+  minScreenAvatar: false
   analysis: 
-  articles: 
-    title: ['博客文章', '月更新', '周更新']
+    articles: 
+      title: ['博客文章', '月更新', '周更新']
 ---
