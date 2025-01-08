@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # go-redis 学习
 
 ::: details 一些废话

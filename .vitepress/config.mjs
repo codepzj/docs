@@ -4,9 +4,9 @@ import { blogTheme } from "./blog-theme";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   extends: blogTheme,
-  title: "浩瀚星河的文档",
+  title: "浩瀚星河",
   description: "实用的学习笔记、项目教程",
-  lang: "zh-Hans",
+  lang: "zh-cn",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: "/avatar.jpg",
