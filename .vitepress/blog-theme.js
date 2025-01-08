@@ -5,6 +5,7 @@ const blogTheme = getThemeConfig({
   mermaid: true,
   search: false,
   recommend: false,
+  themeColor: "vp-green",
 });
 
 export { blogTheme };

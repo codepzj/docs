@@ -1,3 +1,15 @@
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888 !important;
+}
+
 .group:has([role="button"]) .VPSidebarItem.level-0 .items {
   padding-left: 16px !important;
   border-left: 1px solid var(--vp-c-divider);
