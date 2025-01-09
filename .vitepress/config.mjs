@@ -46,7 +46,8 @@ export default defineConfig({
         {
           text: "进阶用法",
           items: [
-            { text: "go-redis", link: "/golang/进阶用法/go-redis学习.html" },
+            { text: "go-redis", link: "/golang/进阶用法/go-redis.html" },
+            { text: "go-generics", link: "/golang/进阶用法/go-generics.html" },
           ],
         },
       ],
