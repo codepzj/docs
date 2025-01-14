@@ -1,9 +1,8 @@
 import { defineConfig } from "vitepress";
-import { blogTheme } from "./blog-theme";
+import timeline from "vitepress-markdown-timeline";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  extends: blogTheme,
   title: "浩瀚星河",
   description: "实用的学习笔记、项目教程",
   lang: "zh-cn",
@@ -116,6 +115,9 @@ export default defineConfig({
     theme: {
       light: "one-light",
       dark: "one-dark-pro",
+    },
+    config: (md) => {
+      md.use(timeline);
     },
   },
 });

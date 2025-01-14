@@ -1,5 +1,11 @@
-import BlogTheme from "@sugarat/theme";
+// .vitepress/theme/index.ts or .vitepress/theme/index.js
+import Theme from "vitepress/theme";
 
-import "./style.scss"
+import "vitepress-markdown-timeline/dist/theme/index.css";
 
-export default BlogTheme;
+export default {
+  ...Theme,
+  enhanceApp(ctx) {
+    Theme.enhanceApp(ctx);
+  },
+};
