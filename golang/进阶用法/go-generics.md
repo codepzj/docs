@@ -1,8 +1,3 @@
----
-hidden: true
-outline: deep
----
-
 # Go 泛型
 
 泛型编程为 Go 提供了抽象通用逻辑的能力，减少冗余代码，提升代码的维护性和可读性。以下是 Go 泛型的高级应用，适合具有研究背景的读者。
@@ -98,4 +93,3 @@ func MapValues[T constraints.Integer](list []T, mapFunc func(num T) T) []T {
 ```
 
 此类泛型函数在数据处理和算法实现中尤为有用，减少了重复代码，提升了代码的抽象性。
-
