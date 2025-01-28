@@ -4,7 +4,7 @@ Gen 也支持 GORM Clauses，其使用类似于 Gorm。
 
 ## Upsert
 
-Gen 为不同数据库提供兼容的 Upsert 支持 [就像 GORM](../docs/create.html#upsert)
+Gen 为不同数据库提供兼容的 Upsert 支持
 
 ```go
 u := query.User
@@ -18,7 +18,7 @@ u.Clauses(clause.OnConflict{UpdateAll: true}).Create(value).Error
 
 ## Hints
 
-优化器提示用于控制查询优化器选择某个查询执行计划，Gen 通过 [gorm.io/hints](docs_hints) 提供支持，例如：
+优化器提示用于控制查询优化器选择某个查询执行计划，Gen 通过 `gorm.io/hints` 提供支持，例如：
 
 ```go
 import "gorm.io/hints"
