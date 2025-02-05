@@ -1,13 +1,10 @@
-@font-face {
-  font-family: "LXGW";
-  src: url("./fonts/LXGWZhenKaiGB-Regular.ttf") format("truetype");
-}
+@import url("https://cdn.jsdelivr.net/npm/cn-fontsource-lxgw-wen-kai-gb-screen@1.0.6/font.min.css");
 
 :lang(zh) {
   --vp-code-copy-copied-text-content: "Copied";
 }
 :root {
-  --vp-font-family-base: "LXGW", "Inter", ui-sans-serif, system-ui, sans-serif,
+  --vp-font-family-base: "LXGW WenKai GB Screen", "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
