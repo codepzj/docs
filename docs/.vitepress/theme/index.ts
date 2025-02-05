@@ -18,7 +18,7 @@ import giscusTalk from "vitepress-plugin-comment-with-giscus";
 export default {
   extends: DefaultTheme,
   Layout,
-  enhanceApp({ app, router }) {
+  enhanceApp({ router }) {
     if (inBrowser) {
       NProgress.configure({ showSpinner: false });
       router.onBeforeRouteChange = () => {
