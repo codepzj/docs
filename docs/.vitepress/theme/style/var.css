@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "LXGW";
+  src: url("./fonts/LXGWZhenKaiGB-Regular.ttf") format("truetype");
+}
+
+:lang(zh) {
+  --vp-code-copy-copied-text-content: "Copied";
+}
+:root {
+  --vp-font-family-base: "LXGW", "Inter", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+:root {
+  --vp-c-brand-1: #18794e;
+  --vp-c-brand-2: #299764;
+  --vp-c-brand-3: #30a46c;
+}
+
+.dark {
+  --vp-c-brand-1: #3dd68c;
+  --vp-c-brand-2: #30a46c;
+  --vp-c-brand-3: #298459;
+}
+
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-image-filter: blur(40px);
+  --vp-nav-logo-height: 36px;
+}
+
+body {
+  font-size: 16.5px;
+}
+.VPNavBarTitle a.title {
+  font-size: 20px;
+}
+.VPNavBarMenuLink {
+  font-size: 17px !important;
+}
+.VPNavBarMenuGroup .text {
+  font-size: 17px !important;
+}
+
+.VPSidebarItem {
+  & > .item > .text {
+    font-size: 16px !important;
+  }
+  & > .items > .VPSidebarItem {
+    .text {
+      font-size: 15px !important;
+    }
+  }
+}
+
+/* 超链接下划线 */
+.vp-doc a {
+  text-decoration: none;
+}
+
+/* medium样式 */
+.medium-zoom-overlay {
+  z-index: 30;
+}
+
+.medium-zoom-image {
+  z-index: 9999 !important;
+}
+
+.group:has([role="button"]) .VPSidebarItem.level-0 .items {
+  padding-left: 16px !important;
+  border-left: 1px solid var(--vp-c-divider);
+  border-radius: 2px;
+  transition: background-color 0.25s;
+}
+
+/* 基础滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 4px;
+  opacity: 0;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(200, 155, 155, 0);
+  border-radius: 3em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c3c0c1;
+  border-radius: 2em;
+  opacity: 1;
+}
