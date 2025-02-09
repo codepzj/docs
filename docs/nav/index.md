@@ -6,6 +6,7 @@ prev: false
 next: false
 ---
 
+<style src="/.vitepress/theme/style/nav.css"></style>
 <script setup>
 import { NAV_DATA } from '/.vitepress/theme/utils/data'
 </script>

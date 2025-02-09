@@ -33,12 +33,13 @@ export default {
       };
       router.onAfterRouteChanged = () => {
         // 根据路由动态添加或移除 nav.css 样式
+        console.log(router.route.path);
         if (router.route.path === "/nav" || router.route.path === "/nav/") {
-          if (
-            !document.querySelector(
-              'link[href="/.vitepress/theme/style/nav.css"]'
-            )
-          ) {
+          const existingLink = document.querySelector(
+            'link[href="/.vitepress/theme/style/nav.css"]'
+          );
+          if (!existingLink) {
+            console.log("添加nav.css");
             const link = document.createElement("link");
             link.rel = "stylesheet";
             link.href = "/.vitepress/theme/style/nav.css";
@@ -46,14 +47,18 @@ export default {
           }
         } else {
           // 移除 nav.css 样式
+          console.log("移除nav.css");
           const linkElements = document.querySelectorAll(
             'link[href="/.vitepress/theme/style/nav.css"]'
           );
-          linkElements.forEach((link) => {
-            if (link.parentNode) {
-              link.parentNode.removeChild(link);
-            }
-          });
+          if (linkElements.length > 0) {
+            linkElements.forEach((link) => {
+              if (link.parentNode) {
+                link.parentNode.removeChild(link);
+              }
+            });
+            location.reload(); // 找到并删除后重新加载页面
+          }
         }
         NProgress.done();
       };
