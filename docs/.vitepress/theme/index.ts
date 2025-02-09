@@ -1,30 +1,60 @@
-/* .vitepress/theme/index.ts */
-import DefaultTheme from "vitepress/theme";
-import "./style/var.css";
-import "./style/blockquote.css";
-import "./style/custom-block.css";
-import "./style/blur.css";
-import "./style/hidden.css";
-import "./style/link.css";
-
-import Layout from "./components/layout.vue";
-import mediumZoom from "medium-zoom";
-import { onMounted, watch, nextTick } from "vue";
+import { onMounted, watch, nextTick, h } from "vue";
 import { inBrowser, useRoute, useData } from "vitepress";
 import { NProgress } from "nprogress-v2/dist/index.js";
 import "nprogress-v2/dist/index.css";
 import giscusTalk from "vitepress-plugin-comment-with-giscus";
 
+import DefaultTheme from "vitepress/theme";
+import MyLayout from "./components/MyLayout.vue";
+import MNavLinks from "./components/MNavLinks.vue";
+import mediumZoom from "medium-zoom";
+import "./style/index.css";
+
 export default {
   extends: DefaultTheme,
-  Layout,
-  enhanceApp({ router }) {
+  Layout() {
+    const props: Record<string, unknown> = {};
+    // 获取 frontmatter
+    const { frontmatter } = useData();
+
+    /* 添加自定义 class */
+    if (frontmatter.value?.layoutClass) {
+      props.class = frontmatter.value.layoutClass;
+    }
+
+    return h(MyLayout, props);
+  },
+  enhanceApp({ app, router }: { app: any; router: any }) {
+    app.component("MNavLinks", MNavLinks);
     if (inBrowser) {
       NProgress.configure({ showSpinner: false });
       router.onBeforeRouteChange = () => {
         NProgress.start();
       };
       router.onAfterRouteChanged = () => {
+        // 根据路由动态添加或移除 nav.css 样式
+        if (router.route.path === "/nav" || router.route.path === "/nav/") {
+          if (
+            !document.querySelector(
+              'link[href="/.vitepress/theme/style/nav.css"]'
+            )
+          ) {
+            const link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = "/.vitepress/theme/style/nav.css";
+            document.head.appendChild(link);
+          }
+        } else {
+          // 移除 nav.css 样式
+          const linkElements = document.querySelectorAll(
+            'link[href="/.vitepress/theme/style/nav.css"]'
+          );
+          linkElements.forEach((link) => {
+            if (link.parentNode) {
+              link.parentNode.removeChild(link);
+            }
+          });
+        }
         NProgress.done();
       };
     }

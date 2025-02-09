@@ -33,4 +33,6 @@ features:
       src: /icons/nuxt.svg
     title: "Nuxt"
     details: "体验 Nuxt 的强大生态，打造流畅的服务端渲染项目"
+
+comments: false
 ---

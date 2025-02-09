@@ -2,11 +2,12 @@
 import { useData } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 import { nextTick, provide } from "vue";
-import backtotop from "./backtotop.vue";
+import BackToTop from "./BackToTop.vue";
 
 const { isDark } = useData();
 
 const enableTransitions = () =>
+
   "startViewTransition" in document &&
   window.matchMedia("(prefers-reduced-motion: no-preference)").matches;
 
@@ -43,7 +44,7 @@ provide("toggle-appearance", async ({ clientX: x, clientY: y }: MouseEvent) => {
 <template>
   <DefaultTheme.Layout>
     <template #doc-footer-before>
-      <backtotop />
+      <BackToTop />
     </template>
     <template #doc-bottom> </template>
   </DefaultTheme.Layout>

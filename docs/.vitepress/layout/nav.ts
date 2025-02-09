@@ -1,6 +1,15 @@
 const nav = [
   { text: "首页", link: "/" },
-  { text: "前端", items: [] },
+  { text: "导航", link: "/nav/" },
+  {
+    text: "前端",
+    items: [
+      {
+        text: "tailwindcss教程",
+        link: "/tailwindcss/tailwindcss教程.md",
+      },
+    ],
+  },
   {
     text: "后端",
     items: [
@@ -20,4 +29,4 @@ const nav = [
   },
 ];
 
-export default nav
+export default nav;
