@@ -32,31 +32,6 @@ export default {
         NProgress.start();
       };
       router.onAfterRouteChanged = () => {
-        // 根据路由动态添加或移除 nav.css 样式
-        if (router.route.path === "/nav" || router.route.path === "/nav/") {
-          const existingLink = document.querySelector(
-            'link[href="/.vitepress/theme/style/nav.css"]'
-          );
-          if (!existingLink) {
-            const link = document.createElement("link");
-            link.rel = "stylesheet";
-            link.href = "/.vitepress/theme/style/nav.css";
-            document.head.appendChild(link);
-          }
-        } else {
-          // 移除 nav.css 样式
-          const linkElements = document.querySelectorAll(
-            'link[href="/.vitepress/theme/style/nav.css"]'
-          );
-          if (linkElements.length > 0) {
-            linkElements.forEach((link) => {
-              if (link.parentNode) {
-                link.parentNode.removeChild(link);
-              }
-            });
-            location.reload(); // 找到并删除后重新加载页面
-          }
-        }
         NProgress.done();
       };
     }

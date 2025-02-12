@@ -15,6 +15,7 @@ export default [
   {
     rules: {
       "vue/multi-word-component-names": "off", // 禁用 vue/multi-word-component-names 规则
+      "@typescript-eslint/no-explicit-any": ["off"],
     },
   },
 ];
