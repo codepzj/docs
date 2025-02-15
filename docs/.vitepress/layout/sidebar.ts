@@ -179,7 +179,10 @@ const sidebar = {
       ],
     },
   ],
-  "/go_learn": [{ text: "air实现热重载", link: "/go_learn/air实现热重载.md" }],
+  "/go_learn": [
+    { text: "air实现热重载", link: "/go_learn/air实现热重载.md" },
+    { text: "wire优雅的管理go项目", link: "/go_learn/wire优雅的管理go项目.md" },
+  ],
   "/university/": [
     { text: "计算机图形学", link: "/university/计算机图形学.md" },
   ],
